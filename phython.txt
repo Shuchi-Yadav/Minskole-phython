@@ -1,0 +1,308 @@
+# slicing with jump/step values
+# syntax
+# variable[start:stop:step/jump/skip] n-1 will be considered
+
+
+phrase = "The sun is very bright and lively"
+
+print(phrase[0:20]) #sun
+print(phrase[0:33]) 
+print(phrase[0:33:1]) # NO SKIP
+print(phrase[0:33:2]) # ONE SKIP
+print(phrase[0:33:3]) # TWO SKIP
+
+
+print(len(phrase))
+
+
+# if values are not provided in [::]
+
+print(phrase[:33:3]) # missing start vale ? default = start value i.e =0
+print(phrase[0::3]) # missing end value ? default = last char i.e =0
+print(phrase[0:33:]) # missing SKIP value ? default = last char i.e =0
+print(phrase[0:33:1]) # missing SKIP value ? default = last char i.e =0
+print(phrase[0:33:2]) # missing SKIP value ? default = last char i.e =0
+
+
+
+
+
+# neg indexing 
+    # to print the last element
+    # to reverse the string
+    
+    
+# Neg-Indexing	-6	-5	-4	-3	-2	-1
+# Indexing	  0	1	2	3	4	5
+# STRING	    P	Y	T	H	O	N
+# Counting	  1 2	3	4	5	6
+
+
+print(skill[5])    
+print(skill[-1])    
+
+
+v1 = "Python 3.1"
+v2 = "Python 3.8"
+
+
+print(v1[-1])
+print(v2[-1])
+
+
+
+name = "NAMAN" #palindrome
+name2 = "RAKESH"
+print(name[::-1])
+print(name2[::-1])
+
+
+# use case for slicing with skip values
+
+numbers = "123456789"
+print(numbers[::2]) #odd numbers
+print(numbers[1::2]) #even numbers
+
+
+
+#  HW
+'''
+sentence = " My email ID is nikhil.pune@yahoo.com $"
+
+use indexing to print 
+1. the 1st character
+2. @
+3. yahoo
+4. $
+5. slice with 3 characters to be skip
+6. print the sentence in reverse order using neg indexing
+
+character from the given sentence
+'''
+
+
+sentence = " My email ID is nikhil.pune@yahoo.com $"
+
+
+# TOPICS TO BE COVERED 
+# 👉 String Methods
+################################################# 
+
+
+# What are methods
+# methods vs functions
+
+name =  "ANU"
+print(name) #function , independent 
+print(name.lower()) #methods , requires certain variable/object
+
+ans = "Nilkanth"
+print(ans)
+
+
+print(id(ans))
+print(len(ans))
+
+
+
+# String methods
+
+
+# Title case
+#  1st Alphabet of every word in upper case
+name =  "ANAND"
+print(name.title())
+
+s = "Its A NICE daY TodaY"
+print(s.title())
+
+
+
+# casefold() 	Converts complete string into lower case
+print(s.casefold())
+
+
+
+# count()	Returns the number of times a specified value occurs in a string
+sentence = "My email ID is rutuja.pune@yahoo.com $"
+print(sentence.count("."))
+print(sentence.count("@"))
+print(sentence.count(" "))
+
+
+
+
+# find()	Searches the string for a specified value and returns the position of where it was found
+# position of 1st occurence
+print(sentence.find("@")) #26th posn
+print(sentence.find(" ")) #2nd posn
+print(sentence.find("o")) 
+print(sentence.find("Z"))  #-1 , program will not crash 
+print("I am good")
+
+
+# index()	Searches the string for a specified value and returns the position of where it was found
+#  will throw error if the string is not found
+print(sentence.index("o"))
+# print(sentence.index("Z")) #error
+
+
+
+
+# replace()	Returns a string where a specified value is replaced with a specified value
+sentence = " My email ID is nikhil.pune@yahoo.com $"
+print(sentence.replace('email',"mail-box"))
+print(sentence)
+
+
+# strip()	Returns a trimmed version of the string
+# trailling and following spaces only
+
+print(sentence)
+print(sentence.strip())
+
+
+
+
+
+
+
+# split()	Splits the string at the specified separator, and returns a list
+# 
+
+print(sentence.split("@"))
+print(type(sentence.split("@"))) #list
+
+print(sentence.split(" "))
+
+
+# 
+num = "022-26876541"
+print(num.split("-"))
+ans  = num.split("-")
+print(ans[0])
+
+num = "022-26876541"
+print(num.split("-"))
+ans  = num.split("-")
+print(ans[0])
+
+s = "                      p        r     "
+print(s.strip())
+
+
+
+# 👉 Operators in PYTHON
+#################################################
+
+
+#  HW
+'''
+sentence = " My email ID is nikhil.pune@yahoo.com $"
+
+use indexing to print 
+1. the 1st character
+2. @
+3. yahoo
+4. $
+5. slice with 3 characters to be skip
+6. print the sentence in reverse order using neg indexing
+
+character from the given sentence
+'''
+
+
+sentence = " My email ID is nikhil.pune@yahoo.com $"
+
+print(sentence[0])
+print(sentence[27])
+print(sentence[-12])
+print(sentence[28:33])
+print(sentence[-11:-6]) #using neg indexing
+print(sentence[-1])
+
+print(len(sentence))
+print(sentence[38])
+print(sentence[0:39:4]) #n-1
+
+
+num = "123456789"
+print(num[::4])
+
+print(sentence[::-1])
+
+
+
+#HW
+x = '''Jana gana mana adhinayaka jaya he
+Bharata bhagya vidhata
+Panjaba Sindha Gujarata Maratha
+Dravida Utkala Banga
+Vindhya Himachala Yamuna Ganga
+Uchchhala jaladhi taranga
+Tava subha name jage,
+tava subhasisa mage,
+gahe tava jaya gatha.
+Jana gana mangala dayaka jaya he
+Bharata bhagya vidhata.
+Jaya he, jaya he,
+jaya he,
+jaya jaya jaya jaya he'''
+
+# 1. count how many time "jaya/Jaya" appeared
+# 2. Replace Bharata with India
+# 3. Find 1st occurance of Bharata
+# 4. store every word in  a LIST and observe the items in the list .
+
+
+
+
+
+
+
+# comparison 
+# < , > , <= , >= , == , != 
+print(4 < 5)  # True
+print(4 > 3)  # True
+print(4 >= 3) # True
+print(4 <= 3) # False
+print(4 == 3) #False
+print(4 != 3) # True
+print(4 == 3) # False
+print(4 >= 4) # True
+print(4 <= 4) # True
+
+
+# logical operator 
+
+
+# and 
+#True  and True   =====> True
+#False and True   =====> False
+#True  and False  =====> False
+#False and False  =====> False
+
+print(22 == 22 and 33 == 33) # T T
+print(22 != 22 and 33 == 33)# F T
+print(22 == 22 and 33 != 33)# T F 
+print(22 != 22 and 33 != 33) # F F
+
+# or 
+
+#True  or True   =====> True
+#False or True   =====> True
+#True  or False  =====> True
+#False or False  =====> False
+
+
+print(22 == 22 or 33 == 33) # T T 
+print(22 != 22 or 33 == 33) #F T
+print(22 == 22 or 33 != 33) # T F 
+print(22 != 22 or 33 != 33) # F F 
+
+# not
+#not True --- False
+#not False -- True
+
+
+print(not(22 == 22 or 33 == 33)) # T T
