@@ -64,3 +64,16 @@ for y in vehicle.values():
 
 for k,v in vehicle.items():
     print(k, v)    
+
+
+e = dict.fromkeys(["amol", "chinmay", "rose"])    
+print(e)
+
+info3 = {
+    "admin": "chinmay",
+    "customer" : "ssmeee",
+    "support" : "raj"
+}
+
+info3.setdefault('manager', 'kalpana')
+print(info3)
