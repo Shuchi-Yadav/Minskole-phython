@@ -276,5 +276,6 @@ result3 = multiplication()
 e2 = result3(34,5)
 print(e2)
 
-
-    
+def addA(x,y):
+    print(x+y)
+addA(4,5)
